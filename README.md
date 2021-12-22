@@ -63,11 +63,23 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+    - Checked to make sure create route exists
+    - Create controller is present
+    - Error is: NameError (uninitialized constant ToysController::Toys): app/Controllers/toys_controller.rb:10:in `create'
+    - Changed Toys to Toy
+    - Works now
 
 - Update the number of likes for a toy
 
   - How I debugged:
+    - Return code is Completed 204 No Content
+    - Refreshing the page updates like count in the view
+    - Added render statement
+    - Likes work now
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+    - error is: ActionController::RoutingError (No route matches [DELETE] "/toys/4"):
+    - Added delete route
+    - Donate works now
